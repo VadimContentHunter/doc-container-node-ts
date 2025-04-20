@@ -1,0 +1,7 @@
+{
+    "watch": ["app"],
+    "ext": ".ts,.js",
+    "ignore": [],
+    "exec": "npx node --no-warnings=ExperimentalWarning --loader ts-node/esm app/server.ts",
+    "legacyWatch": true
+}
