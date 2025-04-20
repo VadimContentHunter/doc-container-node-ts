@@ -5,6 +5,7 @@ const port = 3000;
 
 // Маршрут по умолчанию
 app.get('/', (req: Request, res: Response) => {
+    const message: string = 'hello, eslint';
     res.send('Hello, world!');
 });
 

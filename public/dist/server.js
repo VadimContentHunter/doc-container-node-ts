@@ -3,6 +3,7 @@ const app = express();
 const port = 3000;
 // Маршрут по умолчанию
 app.get('/', (req, res) => {
+    const message = 'hello, eslint';
     res.send('Hello, world!');
 });
 // Запуск сервера
