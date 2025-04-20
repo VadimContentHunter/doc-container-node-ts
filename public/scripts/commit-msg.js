@@ -17,6 +17,13 @@
  * Пример допустимого коммита:
  * - feat: Добавление нового API
  * - feat(api-0): Добавление нового API для работы с пользователями
+ * - fix: Fix validation error in data processing
+ * - feat: Add new API for user management
+ * - docs: Update documentation for installation instructions
+ * - style: Format code, add spaces for better readability
+ * - refactor: Refactor function to improve code clarity
+ * - test: Add unit tests for the new API
+ * - chore: Update project dependencies
  *
  * Описание коммита должно начинаться с заглавной буквы.
  *
