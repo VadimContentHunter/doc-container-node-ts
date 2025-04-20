@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd public || exit 1
+node scripts/commit-msg.js "$1"
