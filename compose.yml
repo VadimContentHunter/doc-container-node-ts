@@ -2,7 +2,7 @@ version: "3.8"
 
 networks:
   browser-game-network:
-    name: browser-game-bang
+    name: doc-container-node-ts
     driver: bridge
 
 services:
@@ -10,13 +10,13 @@ services:
     build:
       context: .
       dockerfile: docker/node-js-22/Dockerfile
-    container_name: server-browser-game-bang
-    working_dir: /var/www/browser-game-bang  # Указываем рабочую директорию внутри контейнера
+    container_name: server-doc-container-node-ts
+    working_dir: /var/www/doc-container-node-ts  # Указываем рабочую директорию внутри контейнера
     ports:
       - "9003:9003" # Пробрасываем порт для работы сервера
       - "9229:9229" # Пробрасываем порт для отладки Node.js
     volumes:
-      - ./public:/var/www/browser-game-bang  # Монтируем локальную папку public в контейнер
+      - ./public:/var/www/doc-container-node-ts  # Монтируем локальную папку public в контейнер
     networks:
       - browser-game-network
     command: npm run dev
