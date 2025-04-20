@@ -14,15 +14,19 @@ export default defineConfig([
             prettier: eslintPluginPrettier,
             '@typescript-eslint': tseslint.plugin,
         },
+        languageOptions: {
+            globals: {
+                ...globals.node,
+            },
+        },
     },
 
     // Рекомендованные правила
     js.configs.recommended,
     ...tseslint.configs.recommended,
-
     // TS/TSX правила
     {
-        files: ['**/*.{ts,tsx}'],
+        files: ['app/**/*.{ts,tsx}'],
         languageOptions: {
             globals: {
                 ...globals.node,

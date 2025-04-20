@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd public || exit 1
+
+echo "Running npm run lint in /public..."
+
+npm run lint
