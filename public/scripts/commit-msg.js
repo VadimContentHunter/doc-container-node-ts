@@ -14,9 +14,14 @@
  * - test: Добавление или изменение тестов
  * - chore: Рутинные задачи (например, обновление зависимостей)
  *
- * Пример допустимого коммита:
- * - feat: Добавление нового API
- * - feat(api-0): Добавление нового API для работы с пользователями
+ * Регулярное выражение для проверки формата коммита:
+ * ^(fix|feat|docs|style|refactor|test|chore)\s*(\([a-z0-9\-]+\))?\s*:\s[A-Za-z].*
+ * - Тип (например, feat, fix) обязательно.
+ * - Область (например, api-0) не обязательна, но если присутствует, она должна быть в круглых скобках.
+ *
+ * Примеры:
+ * - feat(api-0): Add new user endpoint
+ * - fix(auth): Fix login bug
  * - fix: Fix validation error in data processing
  * - feat: Add new API for user management
  * - docs: Update documentation for installation instructions
@@ -24,18 +29,6 @@
  * - refactor: Refactor function to improve code clarity
  * - test: Add unit tests for the new API
  * - chore: Update project dependencies
- *
- * Описание коммита должно начинаться с заглавной буквы.
- *
- * Регулярное выражение для проверки формата коммита:
- * ^(fix|feat|docs|style|refactor|test|chore)\s*(\([a-z0-9\-]+\))?\s*:\s[A-Za-z].*
- * - Тип (например, feat, fix) обязательно.
- * - Область (например, api-0) не обязательна, но если присутствует, она должна быть в круглых скобках.
- * - Описание начинается с заглавной буквы.
- *
- * Пример:
- * - feat(api-0): Add new user endpoint
- * - fix(auth): Fix login bug
  *
  * Скрипт считывает последний коммит и проверяет его формат с помощью регулярного выражения.
  * Если формат неверен, скрипт завершится с ошибкой и сообщением.
