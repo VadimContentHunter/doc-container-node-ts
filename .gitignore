@@ -1,6 +1,5 @@
 /.databases
 /.git
-/.vscode
 /databases
 /public/node_modules
 /public/dist

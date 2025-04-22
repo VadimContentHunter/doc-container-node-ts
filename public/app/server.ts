@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 
 const app = express();
-const port = 3000;
+const port = 9003;
 
 // Маршрут по умолчанию
 app.get('/', (req: Request, res: Response) => {

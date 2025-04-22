@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "npx nodemon",
+        "dev-debug": "npx nodemon --watch app --ext .ts,.js --exec \"npx node --inspect=0.0.0.0:9229 --no-warnings=ExperimentalWarning --loader ts-node/esm app/server.ts\"",
+        "dev": "npx nodemon --watch app --ext .ts,.js --exec \"npx node --no-warnings=ExperimentalWarning --loader ts-node/esm app/server.ts\"",
         "build": "npx rimraf ./dist && npx tsc",
         "start": "npm run build && node dist/server",
         "lint": "npx eslint ./app",
